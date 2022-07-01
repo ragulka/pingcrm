@@ -24,6 +24,22 @@
         <div :class="isUrl('reports') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Reports</div>
       </Link>
     </div>
+    <div class="h-12 border border-red-300 overflow-hidden">
+      <div class="overflow-y-scroll h-12" scroll-region>
+        <div class="m-2 border border-green-200 text-white">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+          <p>9</p>
+          <p>10</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

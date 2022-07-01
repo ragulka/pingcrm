@@ -28,6 +28,22 @@
           <loading-button :loading="form.processing" class="btn-indigo ml-auto" type="submit">Update Organization</loading-button>
         </div>
       </form>
+      <div class="h-12 border border-red-300 overflow-hidden m-2 mt-10">
+        <div class="overflow-y-scroll h-12" scroll-region>
+          <div class="m-2 border border-green-200">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+            <p>9</p>
+            <p>10</p>
+          </div>
+        </div>
+      </div>
     </div>
     <h2 class="mt-12 text-2xl font-bold">Contacts</h2>
     <div class="mt-6 bg-white rounded shadow overflow-x-auto">
@@ -108,7 +124,7 @@ export default {
   },
   methods: {
     update() {
-      this.form.put(`/organizations/${this.organization.id}`)
+      this.form.put(`/organizations/${this.organization.id}`, { preserveState: 'errors', preserveScroll: true })
     },
     destroy() {
       if (confirm('Are you sure you want to delete this organization?')) {
